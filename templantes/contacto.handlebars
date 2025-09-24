@@ -1,0 +1,111 @@
+﻿<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Contacto</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 30px;
+            background-color: #f9f9f9;
+        }
+
+        form {
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            max-width: 400px;
+            margin: auto;
+            box-shadow: 0px 2px 6px rgba(0,0,0,0.2);
+        }
+
+        label {
+            display: block;
+            margin-top: 15px;
+        }
+
+        input, textarea {
+            width: 100%;
+            padding: 8px;
+            margin-top: 5px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        button {
+            margin-top: 20px;
+            padding: 10px;
+            width: 100%;
+            background: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+            button:hover {
+                background: #45a049;
+            }
+
+        .error {
+            color: red;
+            font-size: 0.9em;
+        }
+    </style>
+</head>
+<body>
+    <h2>Formulario de Contacto</h2>
+    <form id="contactForm">
+        <label for="nombre">Nombre:</label>
+        <input type="text" id="nombre" name="nombre" required>
+        <span id="errorNombre" class="error"></span>
+
+        <label for="correo">Correo:</label>
+        <input type="email" id="correo" name="correo" required>
+        <span id="errorCorreo" class="error"></span>
+
+        <label for="mensaje">Mensaje:</label>
+        <textarea id="mensaje" name="mensaje" rows="5" required></textarea>
+        <span id="errorMensaje" class="error"></span>
+
+        <button type="submit">Enviar</button>
+    </form>
+
+    <script>
+        document.getElementById("contactForm").addEventListener("submit", function (event) {
+            let valido = true;
+
+            // Limpiar errores
+            document.getElementById("errorNombre").textContent = "";
+            document.getElementById("errorCorreo").textContent = "";
+            document.getElementById("errorMensaje").textContent = "";
+
+            // Validar nombre
+            const nombre = document.getElementById("nombre").value.trim();
+            if (nombre === "") {
+                document.getElementById("errorNombre").textContent = "El nombre es obligatorio.";
+                valido = false;
+            }
+
+            // Validar correo
+            const correo = document.getElementById("correo").value.trim();
+            const regexCorreo = /^[^\\s@]+@[^\\s@]+\\.[^\\s@]+$/;
+            if (!regexCorreo.test(correo)) {
+                document.getElementById("errorCorreo").textContent = "Ingrese un correo válido.";
+                valido = false;
+            }
+
+            // Validar mensaje
+            const mensaje = document.getElementById("mensaje").value.trim();
+            if (mensaje === "") {
+                document.getElementById("errorMensaje").textContent = "El mensaje no puede estar vacío.";
+                valido = false;
+            }
+
+            if (!valido) {
+                event.preventDefault();
+            }
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,166 @@
+﻿body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #ffe6f0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+}
+header {
+    width: 100%;
+    text-align: center;
+    padding: 2rem 0;
+    background-color: #ffb3c6;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    box-sizing: border-box; 
+    font-size: x-large;
+}
+.mi-header h1 {
+    color: white;
+    
+}
+
+
+.gif-principal {
+    display: block;
+    margin: 0 auto; 
+    max-width: 300px;
+    border-radius: 10px; 
+}
+
+h1 {
+
+    font-size: x-large;
+}
+
+p {
+    font-size: 24px;
+    margin: 5px 0;
+}
+
+.nombre {
+    font-weight: bold;
+    color: #000000;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #ffe6f0;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.menu {
+    background: #333;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    padding: 10px 20px;
+    width: 100%;
+}
+
+    .menu .logo {
+        margin-right: auto;
+        font-size: 1.5em;
+    }
+
+    .menu ul {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        display: flex;
+    }
+
+        .menu ul li {
+            margin-left: 20px;
+        }
+
+            .menu ul li a {
+                color: #fff;
+                text-decoration: none;
+                font-weight: bold;
+                transition: color 0.2s;
+            }
+
+                .menu ul li a:hover {
+                    color: #00aced;
+                }
+.contenido {
+    text-align: center;
+    margin-top: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+    justify-content: center; 
+}
+
+
+
+
+.btn-familia {
+    display: inline-block;
+    padding: 12px 25px;
+    background: pink;
+    color: #000000;
+    font-size: 1rem;
+    font-weight: bold;
+    text-decoration: none;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    transition: all 0.3s ease;
+}
+
+    .btn-familia:hover {
+        background: #3a5ecb;
+        transform: translateY(-2px); 
+        box-shadow: 0 6px 12px rgba(0,0,0,0.25);
+    }
+
+
+.btn-Instagram {
+    display: inline-block;
+    padding: 12px 25px;
+    background: pink;
+    color: #000000;
+    font-size: 1rem;
+    font-weight: bold;
+    text-decoration: none;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    transition: all 0.3s ease;
+}
+
+.btn-Instagram {
+    background: #3a5ecb;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 12px rgba(0,0,0,0.25);
+}
+
+
+.btn-facebook {
+    display: inline-block;
+    padding: 12px 25px;
+    background: pink;
+    color: #000000;
+    font-size: 1rem;
+    font-weight: bold;
+    text-decoration: none;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    transition: all 0.3s ease;
+}
+
+.btn-facebook {
+    background: #3a5ecb;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 12px rgba(0,0,0,0.25);
+}

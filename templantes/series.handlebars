@@ -1,0 +1,40 @@
+﻿<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Mis Series Favoritas</title>
+    <link rel="stylesheet" href="C:\Users\franc\OneDrive\Escritorio\tecnologiadelinternet2\primeraasignacionlimpia\desing\series.css">
+</head>
+
+
+<body>
+    <nav class="menu">
+        <h2 class="logo">Mi Mundo</h2>
+        <ul>
+            <li><a href="persona.html">Sobre mí</a></li>
+            <li><a href="hobbies.html">Hobbies</a></li>
+            <li><a href="youtubers.html">Youtubers</a></li>
+            <li><a href="series.html">Animes / Series</a></li>
+        </ul>
+    </nav>
+    </nav><header>
+        <h1 style="color: white;">mis series favoritas</h1>
+    </header>
+
+    <div class="series">
+        {{#each this}}
+        <div class="serie">
+            <h2>{{Titulo}}</h2>
+            <img src="data:image/jpeg;base64,{{imagenbase64}}" alt="{{Titulo}}">
+
+            <p>{{Descripcion}}</p>
+            {{#if Trailerurl}}
+            <iframe src="{{Trailerurl}}" frameborder="0" allowfullscreen></iframe>
+            {{else}}
+            <p>Trailer no disponible</p>
+            {{/if}}
+        </div>
+        {{/each}}
+    </div>
+</body>
+</html>

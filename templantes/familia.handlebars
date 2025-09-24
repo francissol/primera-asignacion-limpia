@@ -1,0 +1,40 @@
+﻿
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Mi Familia</title>
+
+   
+   
+    <link rel="stylesheet" href="C:\Users\franc\OneDrive\Escritorio\tecnologiadelinternet2\primeraasignacionlimpia\desing\familia.css">
+</head>
+
+<body>
+    <nav class="menu">
+        <h2 class="logo">Mi Mundo</h2>
+        <ul>
+            <li><a href="persona.html">Sobre mí</a></li>
+            <li><a href="hobbies.html">Hobbies</a></li>
+            <li><a href="youtubers.html">Youtubers</a></li>
+            <li><a href="series.html">Animes / Series</a></li>
+            <li><a href="familia.html">Familia</a></li>
+        </ul>
+    </nav>
+
+    <header>
+        <h1 style="color: white;">Mi Familia</h1>
+        <img src="../desing/imagenes/el_test_de_la_familia_2606_600.jpg" alt="Mi Familia" class="familia-img">
+
+    </header>
+
+    <div class="timeline">
+        {{#each this}}
+        <div class="timeline-item">
+            <h2>{{Nombre}}</h2>
+            <p>{{Parentezco}}</p>
+        </div>
+        {{/each}}
+    </div>
+</body>
+</html>
