@@ -28,13 +28,14 @@
             <img src="data:image/jpeg;base64,{{imagenbase64}}" alt="{{Titulo}}">
 
             <p>{{Descripcion}}</p>
-            {{#if Trailerurl}}
-            <iframe src="{{Trailerurl}}" frameborder="0" allowfullscreen></iframe>
-            {{else}}
-            <p>Trailer no disponible</p>
-            {{/if}}
+
+            <iframe src="https://www.youtube.com/embed/CNciwiyTeBQ"
+                    width="560"
+                    height="315"
+                    frameborder="0"
+                    allow="accelerometer; clipboard-write; gyroscope; picture-in-picture"
+                    referrerpolicy="strict-origin-when-cross-origin"
+                    allowfullscreen>
+            </iframe>
         </div>
         {{/each}}
-    </div>
-</body>
-</html>
