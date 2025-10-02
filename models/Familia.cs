@@ -11,6 +11,9 @@ namespace primeraasignacionlimpia.models
         
         public string Nombre { get; set; }
         public string Parentezco { get; set; }
-       
+
+        public byte[] Foto { get; set; }
+        public string Fotobase64 { get; set; }
+
     }
 }

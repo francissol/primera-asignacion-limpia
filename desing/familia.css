@@ -1,41 +1,49 @@
-﻿* {
+﻿
+
+
+:root {
+    --color-pink-light: #fbecec;
+    --color-pink-soft: #ffb6c1;
+    --color-pink-dark: #e88d9c;
+    --color-grey-light: #f5f5f5;
+    --color-text-dark: #333;
+    --color-text-light: #666;
+    --color-line: #ffb3c6; 
+}
+
+/* Estilos generales */
+* {
     box-sizing: border-box;
 }
 
 body {
-    font-family: Inter, system-ui, Segoe UI, Arial, sans-serif;
-    margin: 24px;
-    background: #ffe6f0;
-    color: #141414;
-}
-
-.timeline-wrap {
-    max-width: 900px;
-    margin: 0 auto;
-}
-
-h1 {
-    font-size: 20px;
-    margin-bottom: 16px;
-}
-body {
+    font-family: 'Poppins', sans-serif;
     margin: 0;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background-color: #f7f8fc;
-    color: #333;
+    background-color: var(--color-pink-light);
+    color: var(--color-text-dark);
 }
 
-/* menú */
+h1, h2 {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+}
+
+/* Menú de navegación (sin cambios) */
 .menu {
-    background: #2b2b3d;
+    background-color: #fff;
+    border-bottom: 2px solid var(--color-grey-light);
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 15px 40px;
+    padding: 10px 50px;
+    width: 100%;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
 }
 
     .menu .logo {
-        color: #f5f5f5;
+        font-size: 1.8em;
+        color: var(--color-pink-dark);
+        font-family: 'Montserrat', cursive;
         margin: 0;
     }
 
@@ -47,105 +55,148 @@ body {
     }
 
         .menu ul li {
-            margin-left: 20px;
+            margin-left: 30px;
         }
 
             .menu ul li a {
-                color: #f5f5f5;
+                color: var(--color-text-dark);
                 text-decoration: none;
-                font-weight: bold;
+                font-weight: 400;
+                transition: color 0.3s ease, border-bottom 0.3s ease;
+                padding: 5px 0;
             }
 
                 .menu ul li a:hover {
-                    color: #4b7cf3;
+                    color: var(--color-pink-soft);
+                    border-bottom: 2px solid var(--color-pink-soft);
                 }
 
-/* encabezado */
+/* Encabezado de la página (sin cambios) */
 header {
     text-align: center;
-    padding: 40px 0;
-    background: #ffb3c6;
-    color: white;
+    padding: 60px 20px;
+    background: linear-gradient(135deg, var(--color-pink-soft) 0%, var(--color-pink-dark) 100%);
+    color: #fff;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
 
-/* timeline */
-.timeline {
-    position: relative;
-    width: 80%;
-    margin: 60px auto;
-    padding-left: 40px;
-    list-style: none;
-}
-
-    .timeline::before {
-        content: "";
-        position: absolute;
-        left: 20px;
-        top: 0;
-        bottom: 0;
-        width: 4px;
-        background: #ffb3c6;
-        border-radius: 4px;
+    header h1 {
+        font-size: 3rem;
+        color: #fff;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
     }
 
-/* cada item */
-.timeline-item {
+---
+
+## Estilo de Genealogía de Tarjetas Corregido
+
+Aquí está la parte importante que tienes que reemplazar. Este código crea la línea vertical y los círculos que marcan cada tarjeta, ahora bien posicionados.
+
+```css
+/* Contenedor de la línea de tiempo */
+.galeria-familia {
     position: relative;
-    margin: 20px 0;
-    padding: 20px 30px;
-    background:  #ffb3c6;
-    border-radius: 10px;
-    box-shadow: 0 6px 14px rgba(0,0,0,0.1);
-    transition: transform .2s ease, box-shadow .2s ease;
+    max-width: 800px;
+    margin: 40px auto;
+    padding: 0 20px 0 60px; /* Nuevo padding para dar espacio a la línea */
 }
 
-    .timeline-item:hover {
-        transform: translateY(-4px);
-        box-shadow: 0 12px 24px rgba(0,0,0,0.15);
+/* Línea vertical de la genealogía */
+.galeria-familia::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 30px; /* Posición de la línea */
+    width: 4px;
+    height: 100%;
+    background-color: var(--color-line);
+    border-radius: 4px;
+}
+
+/* Estilo de cada tarjeta de miembro de la familia */
+.miembro-familia {
+    position: relative;
+    background-color: #fff;
+    border-radius: 12px;
+    box-shadow: 0 6px 14px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    overflow: hidden;
+    margin-bottom: 40px;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    gap: 20px; /* Espacio entre la imagen y el texto */
+}
+
+    .miembro-familia:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
     }
 
-    /* circulito *////
-    .timeline-item::before {
-        content: "";
+    /* Círculo que marca cada tarjeta en la línea de tiempo */
+    .miembro-familia::before {
+        content: '';
         position: absolute;
-        left: -32px;
-        top: 20px;
+        left: -20px; /* Posición del círculo en la línea */
+        top: 35px;
         width: 20px;
         height: 20px;
-        background: #fff;
-        border: 4px solid #4b7cf3;
+        background-color: var(--color-line);
+        border: 4px solid var(--color-pink-light);
         border-radius: 50%;
-        box-shadow: 0 0 0 4px #f7f8fc;
+        z-index: 1; /* Asegura que el círculo esté sobre la línea */
     }
-.familia-img {
-    display: block;
-    margin: 20px auto; 
-    max-width: 300px; 
-    border-radius: 10px; 
-    box-shadow: 0 6px 14px rgba(0,0,0,0.1);
+
+    .miembro-familia img {
+        width: 100px; /* Tamaño más pequeño para la foto */
+        height: 100px;
+        border-radius: 50%; /* Foto circular */
+        object-fit: cover;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    }
+
+.info-miembro {
+    flex-grow: 1;
+    text-align: left;
 }
 
-    /* texto */
-    .timeline-item h2 {
-        margin: 0 0 8px;
-        font-size: 1.2rem;
-        color: white;
-    }
-
-    .timeline-item p {
+    .info-miembro h2 {
         margin: 0;
-        font-size: 0.95rem;
-        color: #555;
+        font-size: 1.2rem;
+        color: var(--color-pink-dark);
     }
 
-/* responsive */
-@media (max-width: 600px) {
-    .timeline {
-        width: 90%;
-        padding-left: 30px;
+    .info-miembro p {
+        margin: 5px 0 0;
+        font-size: 0.9rem;
+        color: var(--color-text-dark);
     }
 
-    .timeline-item {
-        padding: 15px 20px;
+/* Responsive para que se vea bien en móviles */
+@media (max-width: 768px) {
+    .galeria-familia {
+        padding: 0 10px 0 40px;
+    }
+
+        .galeria-familia::before {
+            left: 20px;
+        }
+
+    .miembro-familia {
+        flex-direction: column;
+        text-align: center;
+        padding: 15px;
+    }
+
+        .miembro-familia img {
+            margin-bottom: 10px;
+        }
+
+    .info-miembro {
+        text-align: center;
+    }
+
+    .miembro-familia::before {
+        left: -10px;
     }
 }

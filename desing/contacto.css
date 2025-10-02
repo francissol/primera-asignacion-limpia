@@ -1,0 +1,148 @@
+﻿/* Paleta de colores */
+:root {
+    --color-pink-light: #fbecec;
+    --color-pink-soft: #ffb6c1;
+    --color-pink-dark: #e88d9c;
+    --color-grey-light: #f5f5f5;
+    --color-text-dark: #333;
+}
+
+/* Modificación del body para permitir un flujo de contenido normal */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: var(--color-grey-light);
+    color: var(--color-text-dark);
+    margin: 100px;
+    padding: 2px;
+    display: flex; 
+    flex-direction: column; 
+    min-height: 100vh;
+}
+
+.menu {
+    background-color: #fff;
+    border-bottom: 2px solid var(--color-grey-light);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 50px;
+    width: 100%;
+    box-sizing: border-box;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+}
+
+    .menu .logo {
+        font-size: 1.8em;
+        color: var(--color-pink-dark);
+        font-family: 'Poppins', cursive;
+        margin: 0;
+    }
+
+    .menu ul {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        display: flex;
+    }
+
+        .menu ul li {
+            margin-left: 30px;
+        }
+
+            .menu ul li a {
+                color: var(--color-text-dark);
+                text-decoration: none;
+                font-weight: 400;
+                transition: color 0.3s ease, border-bottom 0.3s ease;
+                padding: 5px 0;
+            }
+
+                .menu ul li a:hover {
+                    color: var(--color-pink-soft);
+                    border-bottom: 2px solid var(--color-pink-soft);
+                }
+
+header {
+    background-color: var(--color-pink-soft);
+    padding: 3rem 1rem;
+    text-align: center;
+    color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.contact-container {
+    background: #fff;
+    padding: 2.5rem;
+    border-radius: 20px;
+    max-width: 500px;
+    width: 90%;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    border: 2px solid var(--color-pink-light);
+    margin: 2rem auto; /* Esto centra el formulario horizontalmente */
+}
+
+
+header {
+    text-align: center;
+    padding: 3rem 1rem;
+}
+header {
+    text-align: center; /* Esta propiedad centra todo el contenido en el header, incluyendo el título. */
+    padding: 3rem 1rem;
+}
+
+.input-group {
+    margin-bottom: 1.5rem;
+    text-align: left;
+}
+
+label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+    color: var(--color-text-dark);
+}
+
+input, textarea {
+    width: 100%;
+    padding: 1rem;
+    border: 1px solid var(--color-pink-light);
+    border-radius: 12px;
+    box-sizing: border-box;
+    transition: all 0.3s ease;
+    font-size: 1rem;
+}
+
+    input:focus, textarea:focus {
+        outline: none;
+        border-color: var(--color-pink-soft);
+        box-shadow: 0 0 0 3px rgba(255, 182, 193, 0.5);
+    }
+
+button {
+    width: 100%;
+    padding: 1rem;
+    background-color: var(--color-pink-dark);
+    color: white;
+    border: none;
+    border-radius: 25px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    letter-spacing: 1px;
+    margin-top: 1rem;
+}
+
+    button:hover {
+        background-color: #ff85a2;
+        transform: translateY(-2px);
+    }
+
+.error {
+    color: var(--color-pink-dark);
+    font-size: 0.9em;
+    margin-top: 0.5rem;
+    display: block;
+}

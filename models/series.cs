@@ -10,7 +10,7 @@ namespace primeraasignacionlimpia.models
     {
         public string Titulo { get; set; }
         public string Descripcion { get; set; }
-        public string Trailerurl { get; set; }
+        public string trailerurl { get; set; }
 
         public byte[] Imagen { get; set; }
         public string imagenbase64 { get; set; }

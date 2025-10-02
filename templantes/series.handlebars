@@ -15,10 +15,16 @@
             <li><a href="hobbies.html">Hobbies</a></li>
             <li><a href="youtubers.html">Youtubers</a></li>
             <li><a href="series.html">Animes / Series</a></li>
+            <li><a href="contacto.html">Contacto</a></li>
         </ul>
     </nav>
-    </nav><header>
-        <h1 style="color: white;">mis series favoritas</h1>
+    </nav>
+
+
+    <img src="../desing/imagenes/592bec49942ec4c610dfb9566d5c5f12.gif" alt="Animación divertida" class="gif-principal mb-6">
+    <header>
+
+        <h1 style="color: #FF0081;">Mis series favoritas</h1>
     </header>
 
     <div class="series">
@@ -28,14 +34,14 @@
             <img src="data:image/jpeg;base64,{{imagenbase64}}" alt="{{Titulo}}">
 
             <p>{{Descripcion}}</p>
-
-            <iframe src="https://www.youtube.com/embed/CNciwiyTeBQ"
-                    width="560"
-                    height="315"
+            <iframe width="928"
+                    height="522"
+                    src="{{trailerurl}}"
                     frameborder="0"
-                    allow="accelerometer; clipboard-write; gyroscope; picture-in-picture"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                     referrerpolicy="strict-origin-when-cross-origin"
                     allowfullscreen>
             </iframe>
         </div>
         {{/each}}
+    

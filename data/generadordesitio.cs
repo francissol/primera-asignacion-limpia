@@ -12,7 +12,7 @@ namespace primeraasignacionlimpia.data
         public static void GenerarContacto()
         {
             string plantilla4 = File.ReadAllText(
-                @"C:\Users\franc\OneDrive\Escritorio\novenocuatrimestre\tecnologiadelinternet2\primera asiganacion\plantillas\contacto1.handlebars");
+                @"C:\Users\franc\OneDrive\Escritorio\tecnologiadelinternet2\primeraasignacionlimpia\templantes\contacto.handlebars");
 
             var template4 = Handlebars.Compile(plantilla4);
 

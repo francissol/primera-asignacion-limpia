@@ -1,70 +1,49 @@
-﻿body {
-    font-family: Arial, sans-serif;
-    background-color: #ffe6f0;
-    padding: 20px;
-    margin: 0;
+﻿:root {
+   
+    --color-pink-light: #fbecec;
+    --color-pink-soft: #ffb6c1;
+    --color-pink-dark: #e88d9c;
+    --color-grey-light: #f5f5f5;
+    --color-text-dark: #333;
+    --color-blue-pastel: #b0e0e6;
+    --color-purple-pastel: #e6b0e6;
+    --color-orange-light: #ffebcd;
+   
+    --card-bg: #FFFFFF;
+    --shadow: 0 4px 15px rgba(227, 163, 180, 0.2);
 }
-
 header {
-    text-align: center;
-    padding: 2rem 0;
-    background-color: #ffb3c6;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    text-align: center; 
+    padding: 3rem 1rem;
+  
+}
+body {
+    font-family: 'Poppins', sans-serif;
+ 
+    background-color: var(--color-pink-light);
+    color: var(--color-text-dark);
+    margin: 0;
+    padding: 0;
 }
 
-h1 {
-    text-align: center;
-    color: #d1477e;
-    margin-bottom: 30px;
-}
-
-.hobbies {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 20px;
-    justify-content: center;
-}
-
-.hobby {
-    background-color: #fff;
-    border-radius: 10px;
-    padding: 15px;
-    width: 300px;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.15);
-    transition: transform 0.2s;
-}
-
-    .hobby:hover {
-        transform: translateY(-5px);
-    }
-
-    .hobby h2 {
-        text-align: center;
-        margin-top: 0;
-        color: #d1477e;
-    }
-
-    .hobby p {
-        font-size: 14px;
-        line-height: 1.4;
-        color: #333;
-        background-color: #fdfdfd;
-        border-radius: 5px;
-        padding: 10px;
-        margin-top: 10px;
-    }
 
 .menu {
-    background: #333;
-    color: #fff;
+    background-color: #fff;
+    border-bottom: 2px solid var(--color-grey-light);
     display: flex;
+    justify-content: space-between;
     align-items: center;
-    padding: 10px 20px;
+    padding: 10px 50px;
+    width: 100%;
+    box-sizing: border-box;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
 }
 
     .menu .logo {
-        margin-right: auto;
-        font-size: 1.5em;
+        font-size: 1.8em;
+        color: var(--color-pink-dark);
+        font-family: 'Poppins', cursive;
+        margin: 0;
     }
 
     .menu ul {
@@ -75,41 +54,134 @@ h1 {
     }
 
         .menu ul li {
-            margin-left: 20px;
+            margin-left: 30px;
         }
 
             .menu ul li a {
-                color: #fff;
+                color: var(--color-text-dark);
                 text-decoration: none;
-                font-weight: bold;
-                transition: color 0.2s;
+                font-weight: 400;
+                transition: color 0.3s ease, border-bottom 0.3s ease;
+                padding: 5px 0;
             }
 
                 .menu ul li a:hover {
-                    color: #00aced;
+                    color: var(--color-pink-soft);
+                    border-bottom: 2px solid var(--color-pink-soft);
                 }
 
+
+
+/* ---- 5. Tarjetas de Hobbies ---- */
+.hobbies {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    justify-content: center;
+    padding: 40px 20px;
+}
+
+.hobby {
+    background-color: var(--card-bg);
+    border-radius: 15px; /* Bordes más redondeados */
+    padding: 25px;
+    width: 300px;
+    box-shadow: var(--shadow);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+    .hobby:hover {
+        transform: translateY(-8px);
+        box-shadow: 0 8px 25px rgba(227, 163, 180, 0.3);
+    }
+
+    .hobby h2 {
+        font-family: 'Montserrat', sans-serif; /* Usamos la misma fuente de títulos */
+        text-align: center;
+        margin-top: 0;
+      
+        color: var(--color-pink-dark);
+        font-size: 1.8em;
+    }
+
+    .hobby p {
+        font-size: 1em;
+        line-height: 1.6;
+        color: var(--color-text-dark);
+        margin-top: 10px;
+    }
+
+
+.git-section {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+   
+    background: linear-gradient(135deg, var(--color-pink-light), var(--color-grey-light));
+    max-width: 600px;
+    margin: 40px auto;
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: var(--shadow);
+}
+
+.gif-principal {
+   
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    border: 4px solid var(--color-pink-soft);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.git-section h3 {
+    font-family: 'Montserrat', sans-serif;
+    color: var(--color-pink-dark);
+    margin: 0 0 10px 0;
+    font-size: 1.8em;
+}
+
+.git-button {
+    display: inline-block;
+   
+    background-color: var(--color-pink-soft);
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: 600;
+    margin-top: 15px;
+    transition: background-color 0.3s ease;
+}
+
+    .git-button:hover {
+      
+        background-color: var(--color-pink-dark);
+    }
+
+/* ---- 7. Galería de Imágenes ---- */
 .galeria {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 15px;
-    padding: 20px;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    padding: 20px 5%;
 }
 
     .galeria .imagen {
         overflow: hidden;
-        border-radius: 12px;
-        box-shadow: 0 4px 8px rgba(0,0,0,0.2);
-        transition: transform 0.3s;
+        border-radius: 15px;
+        box-shadow: var(--shadow);
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
     }
 
         .galeria .imagen img {
             width: 100%;
-            height: 200px;
+            height: 250px;
             object-fit: cover;
             display: block;
         }
 
         .galeria .imagen:hover {
             transform: scale(1.05);
+            box-shadow: 0 8px 25px rgba(227, 163, 180, 0.3);
         }
